@@ -1,0 +1,285 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Playfair Display', serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*Start Header*/
+.header {
+  background-color: #fff
+}
+.header .container {
+  display: flex; /*لكي يتم تنظمها*/
+  justify-content: space-between; /*لنضع مسافات بين العناصر*/
+  align-items: center; /*لكي يوسط العناصر*/
+  flex-wrap: wrap; /*لكي لا يخرج عنصر من مكانه عند تغير حجم الشاشات*/
+  position: relative;
+  letter-spacing: 5px;
+}
+.header .logo {
+  color: black;
+  font-size: 20px;
+  height: 50px;
+  display: flex; /*لكي يتم تنظمها*/
+  justify-content: center; /*لكي يوسط العنارر*/
+  align-items: center; /*لكي يوسط العناصر*/
+  position: relative;
+  padding: 0 30px;
+  overflow: hidden;
+  transition: 0.0s;
+}
+@media (max-width: 767px) {
+  .header .logo {
+    width: 100%;
+    height: 50px;
+  }
+}
+.header .logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #9f9595;
+  top: 0;
+  left: -100%;
+}
+.header .logo:hover {
+  color: black;
+  background-color: #9f9595;
+}
+.header .main-nav {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .header .main-nav {
+    margin: auto;
+  }
+}
+.header .main-nav > li > a {
+  display: flex; /*لكي يتم تنظمها*/
+  justify-content: center; /*لكي يوسط العنارر*/
+  align-items: center; /*لكي يوسط العناصر*/
+  height: 50px; /* دائما حاول الحفاظ على إرتفاع العنصر*/
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  overflow: hidden;
+  transition: 0.0s;
+}
+@media (max-width: 767px) {
+  .header .main-nav > li > a {
+    padding: 10px;
+    font-size: 14px;
+    height: 40px;
+  }
+}
+.header .main-nav > li > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #9f9595;
+  top: 0;
+  left: -100%;
+}
+.header .main-nav > li > a:hover{
+  color: black;
+  background-color: #9f9595;
+}
+/*End Header*/
+/*Start Landing*/
+.landing {
+  background-image: url(../imgs/hamburger.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+.landing h1 {
+  position: absolute;
+  left: 15%;
+  top: 104%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  letter-spacing: 10px;
+  font-size: 40px;
+  color: rgb(141 125 125);
+}
+/*End Landing*/
+/*Start About*/
+.about .container {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 60px;
+  padding-bottom: 100px;
+}
+.about .catreang{
+  padding-left: 60px;
+  padding-bottom: 110px;
+  max-width: 600px;
+}
+.about h1 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 72px;
+
+}
+.about h4 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.about p {
+  font-size: 18px!important;
+  line-height: 1.5;
+  text-align: left;
+}
+.waite {
+  color: #9f9595;
+}
+
+
+.imag-1 > img {
+  max-width: 500px;
+  height: auto;
+  filter: opacity(0.7);/* وضع فلتر باهت على الصورة*/
+}
+.break .container {
+  color: #757575!important;
+  font-weight: 100;
+}
+/*End About*/
+/* Start Our */
+.our .container {
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-left: 110px;
+  padding-bottom: 100px;
+}
+.our .note {
+  padding-right: 60px;
+  padding-bottom: 110px;
+  max-width: 600px;
+}
+.note h1 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.note h4,p {
+  font-size: 18px!important;
+  line-height: 1.5;
+  text-align: left;
+}
+.note h4 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.note p {
+  color: #757575!important;
+  font-size: 15px;
+  line-height: 1.5;
+}
+/*End Our */
+/*Start Contact */
+.contact h1 {
+  letter-spacing: 5px;
+  font-size: 34;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contact p {
+  font-family: "Times New Roman", Georgia, Serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.contact .text-blue {
+  color: #607d8b;
+  font-size: 18px;
+}
+.contact .w3-input {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  overflow: visible;
+  font: inherit;
+}
+.contact .w3-button{
+  color: #000!important;
+  background-color: #f1f1f1!important;
+  margin-top: 16px!important;
+  margin-bottom: 16px!important;
+  user-select: none;
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.w3-center {
+  color: #000;
+  background-color: #f1f1f1;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+.w3-center p {
+  padding-left: 50%;
+}
+
+/*End Contact */
+
+
+
+
+
